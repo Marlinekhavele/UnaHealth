@@ -56,3 +56,9 @@ DB_PASSWORD=password
 service has two DB services:
 - `una_health_app_db` bound to port 5432 - a DB for local testing,
 - `una_health_app_test_db` bound to port 5433 - a DB for running tests.
+
+Load CSVs 
+- Initialize database with the above credentials for the DB
+- Run the script to `csv_loader` and provide the sample data path to load the data into the DB
+- command for running the script `python csv_loader.py sample-data`  
+
