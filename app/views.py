@@ -3,7 +3,7 @@ from rest_framework import generics
 from rest_framework.response import Response
 from django_filters.rest_framework import DjangoFilterBackend
 from rest_framework.filters import OrderingFilter, SearchFilter
-from .models import User, GlucoseLevel
+from .models import  GlucoseLevel
 from .serializers import (
   GlucoseLevelSerializer,
 )
@@ -23,9 +23,9 @@ class GlucoseLevelListView(generics.ListAPIView):
     queryset = GlucoseLevel.objects.all()
     serializer_class = GlucoseLevelSerializer
     filter_backends = (DjangoFilterBackend, OrderingFilter,SearchFilter)
-    filterset_fields = ['user__id', 'timestamp']
-    ordering_fields = ['timestamp', 'glucose_value']
-    search_fields = ['user__id']
+    filterset_fields = ['user_id', 'timestamp']
+    ordering_fields = ['timestamp', 'Gerät']
+    search_fields = ['user_id']
 
 
 class GlucoseLevelDetailView(generics.RetrieveUpdateDestroyAPIView):

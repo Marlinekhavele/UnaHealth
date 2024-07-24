@@ -1,13 +1,16 @@
-
+import uuid
 from django.db import models
-from user.models import User
 
 
 # Create your models here.
 class GlucoseLevel(models.Model):
-    timestamp = models.DateTimeField()
-    glucose_value = models.IntegerField()
-    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    id =  models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
+    Gerät = models.CharField(max_length=50)
+    Seriennummer = models.UUIDField()
+    Aufzeichnungstyp = models.IntegerField()
+    Gerätezeitstempel = models.DateTimeField()
+    user_id = models.UUIDField(default=uuid.uuid4, editable=False)
+    Glukosewert_Verlauf = models.IntegerField()
 
     def __str__(self):
-        return str(self.glucose_value)
+        return str(self.Gerät)
