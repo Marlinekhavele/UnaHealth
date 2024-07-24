@@ -4,7 +4,7 @@ from django.db import models
 
 # Create your models here.
 class GlucoseLevel(models.Model):
-    id =  models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
+    id =  models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False,unique=True)
     Gerät = models.CharField(max_length=50)
     Seriennummer = models.UUIDField()
     Aufzeichnungstyp = models.IntegerField()
