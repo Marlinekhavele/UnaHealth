@@ -3,7 +3,7 @@ from .views import (GlucoseLevelCreateView,GlucoseLevelListView,GlucoseLevelDeta
 
 
 urlpatterns = [
-    path('api/v1/levels/create/', GlucoseLevelCreateView.as_view(), name='glucose-level-create'),
-    path('api/v1/levels/', GlucoseLevelListView.as_view(), name='glucose-level-list'),
-    path('api/v1/levels/<int:pk>/', GlucoseLevelDetailView.as_view(), name='glucose-level-detail'),
+    path('levels/create/', GlucoseLevelCreateView.as_view(), name='glucose-level-create'),
+    path('levels/', GlucoseLevelListView.as_view(), name='glucose-level-list'),
+    path('levels/<int:pk>/', GlucoseLevelDetailView.as_view(), name='glucose-level-detail'),
 ]

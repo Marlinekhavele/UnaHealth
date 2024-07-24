@@ -25,8 +25,10 @@ source env/bin/activate
 pip install -r requirements.txt
 ```
 ##### To check django admin you need to create a user using the below command
-- python manage.py createsuperuser
+- `python manage.py createsuperuser` 
 ```shell
+- username: unahealth
+- password: password123
 ```
 ##### Ensure Database is on the same level
 ```
