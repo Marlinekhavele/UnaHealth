@@ -8,7 +8,7 @@ from .serializers import (
   GlucoseRecordSerializer,
 )
 
-# Glucoselevelview
+# GlucoseRecordview
 class GlucoseRecordCreateView(generics.CreateAPIView):
     queryset = GlucoseRecord.objects.all()
     serializer_class = GlucoseRecordSerializer

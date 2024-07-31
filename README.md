@@ -1,4 +1,4 @@
-### Glucose Level API 
+### Glucose Record API 
 Glucose API that stores users glucose values and perform basic CRUD functionalities
 
 Built with:
