@@ -1,7 +1,7 @@
 from django.contrib import admin
 
-from .models import GlucoseLevel
+from .models import GlucoseRecord
 
 # Register your models here.
-admin.site.register(GlucoseLevel)
+admin.site.register(GlucoseRecord)
 

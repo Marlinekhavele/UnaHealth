@@ -1,9 +1,9 @@
 from rest_framework import serializers
-from .models import  GlucoseLevel
+from .models import  GlucoseRecord
 
 
 
-class GlucoseLevelSerializer(serializers.ModelSerializer):
+class GlucoseRecordSerializer(serializers.ModelSerializer):
     class Meta:
-        model = GlucoseLevel
+        model = GlucoseRecord
         fields = '__all__'

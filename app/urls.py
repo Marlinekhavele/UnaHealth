@@ -1,9 +1,9 @@
 from django.urls import  path
-from .views import (GlucoseLevelCreateView,GlucoseLevelListView,GlucoseLevelDetailView)
+from .views import (GlucoseRecordCreateView,GlucoseRecordListView,GlucoseRecordDetailView)
 
 
 urlpatterns = [
-    path('levels/create/', GlucoseLevelCreateView.as_view(), name='glucose-level-create'),
-    path('levels/', GlucoseLevelListView.as_view(), name='glucose-level-list'),
-    path('levels/<int:pk>/', GlucoseLevelDetailView.as_view(), name='glucose-level-detail'),
+    path('levels/create/', GlucoseRecordCreateView.as_view(), name='glucose-record-create'),
+    path('levels/', GlucoseRecordListView.as_view(), name='glucose-record-list'),
+    path('levels/<int:pk>/', GlucoseRecordDetailView.as_view(), name='glucose-record-detail'),
 ]
